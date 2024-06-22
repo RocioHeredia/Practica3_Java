@@ -78,7 +78,7 @@ public class Campeonato {
             try {
                 verificaPare(datos, i);
                 List<Deportista> integrantes = datos.subList(i, i + 2);
-                Pareja pareja = new Pareja();
+                Pareja pareja = new Pareja(integrantes.get(0).getNombre(),integrantes.get(1).getNombre());
                 if (pareja.conformar(integrantes)) {
                     parejas.add(pareja); // Agrega la pareja a la lista de parejas
                 }
