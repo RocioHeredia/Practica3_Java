@@ -1,12 +1,15 @@
 package Ej2_P3;
-
 import java.util.List;
 /* Clase Pareja*/
 public class Pareja implements IDeporte {
-
+    private String nom1;
+    private String nom2;
     private List<Deportista> integrantes;
 
-    public Pareja() {}
+    public Pareja(String nom1, String nom2) {
+        this.nom1=nom1;
+        this.nom2=nom2;
+    }
 
     @Override
     public boolean conformar(List<Deportista> integrantes, int cantidad){
@@ -24,7 +27,7 @@ public class Pareja implements IDeporte {
     /*Aca se lmuestra al equipo*/
     @Override
     public void mostrar(){
-        System.out.println("Pareja: ");
+        System.out.println("Pareja: "+nom1 +" y "+nom2);
         for(Deportista depo: integrantes){
             System.out.println(depo);            
         }
@@ -39,4 +42,5 @@ public class Pareja implements IDeporte {
     }
 
     
+}
 }
